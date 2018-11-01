@@ -1,11 +1,14 @@
 ---
 title: "GIS 713 | Preliminary Analyses"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 author: "G. Millar"
 output:
-  pdf_document:
-    toc: yes
   html_document:
-    toc: yes
+    toc: true
 ---
 ```{r global_options, include=FALSE}
 library(knitr)
