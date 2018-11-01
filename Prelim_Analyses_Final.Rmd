@@ -238,7 +238,7 @@ m <- leaflet() %>%
               "Participant 10", "Participant 11")) %>%
   addLegend(values = pt1$conductance_z, pal = conduct.pal, 
             opacity = 1, title = "Skin Conductivity", position = "bottomleft")
-# m
+m
 ```
 
 ## Study Area
@@ -426,12 +426,12 @@ conductance_polys_table <- conductance_polys %>%
                              value = -1000,
                              css = list('background-color', "lightsteelblue"),
                              columns = c("Skin Conductance (M)"))
+
+conductance_groups_table
+
+conductance_polys_table
 ```
 
-![Table 1: Number of sampled skin conductance points and means (landcover groups)](table1.png)
-
-
-![Table 2: Number of sampled skin conductance points and means (all landcover types](table2.png)
 
 ## Space-time Cube
 ```{r Space-time Cube, cache=TRUE}
@@ -472,5 +472,3 @@ plot3d(pt1$lon, pt1$lat, pt1$time, xlab="Longitude",
        col = pt1$conduct_pal, size = 2.5) 
 map3d(transmap)
 ```
-
-![Space-time cube)](space-time.png)
