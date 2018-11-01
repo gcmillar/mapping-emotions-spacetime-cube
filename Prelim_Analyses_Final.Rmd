@@ -125,7 +125,7 @@ par(mar=c(5, 4, 4, 2) + 0.1)
 ```
 
 ### Skin Conductance
-Plotting the elevation and timestamp of each waypoint using ggplot, allows us to visualise the hike towards the valley of Grauson. As a preparatory step, we use the `ymd_hms()` function from the lubridate library to convert the string representating the timestamp to a proper R time-object. As to not confuse ggplot, we also do not pass the SpatialPointsDataFrame-object directly, but convert it to a regular dataframe with `as.data.frame()`:
+Plotting the elevation and timestamp of each waypoint using ggplot, allows the visualization of the cycling route between Tilburg and Waalwijk. As a preparatory step, the `ymd_hms()` function from the lubridate library is used to convert the string representating the timestamp to a proper R time-object. To not confuse ggplot, the SpatialPointsDataFrame-object is not passed directly, but converted to a regular dataframe with `as.data.frame()`:
 ```{r Initial Plotting Exploration b, tidy=TRUE, message=FALSE, fig.align='center', fig.cap="", warning=FALSE, dpi=300, fig.height=5, cache=TRUE}
 if(!require(lubridate)) install_github("rstudio/lubridate")
 if(!require(ggplot2)) install_github("rstudio/ggplot2")
